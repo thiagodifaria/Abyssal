@@ -2,6 +2,10 @@
 
 **An immersive ocean-exploration visual experience, built as a front-end showcase.**
 
+## Live demo
+
+[Open Abyssal](https://abyssal-thiagodifaria.netlify.app/)
+
 ## About the project
 
 Abyssal is a cinematic interface inspired by the scale, tension and mystery of deep-ocean expeditions. Video, motion, a custom cursor and narrative expedition pages combine into an editorial journey rather than a conventional product interface.

@@ -4,11 +4,13 @@
 
 **An immersive ocean-exploration visual experience, built as a front-end showcase.**
 
-[![Next.js](https://img.shields.io/badge/Next.js-10.0.1-000000?style=flat&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-10.2.3-000000?style=flat&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-17.0.1-61DAFB?style=flat&logo=react&logoColor=111827)](https://react.dev/)
 [![Styled Components](https://img.shields.io/badge/Styled%20Components-5.2.0-DB7093?style=flat&logo=styledcomponents&logoColor=white)](https://styled-components.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer%20Motion-Animations-0055FF?style=flat&logo=framer)](https://www.framer.com/motion/)
 [![License](https://img.shields.io/badge/License-MIT-success?style=flat)](LICENSE)
+
+**[Live demo / Demonstração online](https://abyssal-thiagodifaria.netlify.app/)**
 
 ---
 
