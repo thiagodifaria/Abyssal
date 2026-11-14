@@ -10,6 +10,7 @@ import { getExpedition } from '../../../utils/constants/expedition-data';
 import { getSiteContent } from '../../../utils/constants/site-content';
 import AnimateOnScreen from '../../AnimateOnScreen';
 import Arrow from '../../Icons/Arrow';
+import LazyVideo from '../../LazyVideo';
 import {
   ContentSection,
   ProjectAnchor,
@@ -83,7 +84,7 @@ const FeaturedProject = () => {
                 </ProjectTitle>
               </ProjectInfo>
               <VideoPreview>
-                <video
+                <LazyVideo
                   loop
                   autoPlay
                   muted

@@ -50,6 +50,7 @@ const CanvasEraser = (props, ref) => {
   React.useEffect(() => {
     if (canvasEraser) {
       canvasEraser.init(canvasRef.current, options);
+      return () => canvasEraser.destroy();
     }
   }, [canvasEraser, options]);
 

@@ -9,6 +9,7 @@
 [![Styled Components](https://img.shields.io/badge/Styled%20Components-5.2.0-DB7093?style=flat&logo=styledcomponents&logoColor=white)](https://styled-components.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer%20Motion-Animations-0055FF?style=flat&logo=framer)](https://www.framer.com/motion/)
 [![License](https://img.shields.io/badge/License-MIT-success?style=flat)](LICENSE)
+[![Version](https://img.shields.io/badge/version-1.0.1-0B8FA8?style=flat)](https://github.com/thiagodifaria/Abyssal/releases)
 
 **[Live demo / Demonstração online](https://abyssal-thiagodifaria.netlify.app/)**
 

@@ -45,6 +45,7 @@ const Menu = () => {
   const theme = useStyledTheme();
   const { language } = useLanguage();
   const content = getSiteContent(language);
+  const selectedRoute = routes.find(route => route.id === revealVideo);
   const [{ isMenuOpen }, dispatch] = useMenuContext();
   const {
     addCursorBorder,
@@ -68,9 +69,10 @@ const Menu = () => {
     window.addEventListener('resize', resize);
     return () => window.removeEventListener('resize', resize);
   }, [isMenuOpen]);
-  const closeMenu = React.useCallback(() => dispatch({ type: 'TOGGLE_MENU' }), [
-    dispatch,
-  ]);
+  const closeMenu = React.useCallback(
+    () => dispatch({ type: 'TOGGLE_MENU' }),
+    [dispatch],
+  );
   return (
     <AnimatePresence onExitComplete={resetCursorColor}>
       {isMenuOpen && (
@@ -163,19 +165,20 @@ const Menu = () => {
                 initial="show"
                 animate={isHovering ? 'hidden' : 'show'}
               />
-              {routes.map(route => (
+              {selectedRoute && selectedRoute.video !== 'whale.mp4' && (
                 <Video
-                  key={route.id}
-                  src={`/videos/${route.video}`}
+                  key={selectedRoute.id}
+                  src={`/videos/${selectedRoute.video}`}
                   variants={videoVariants}
                   initial="hidden"
-                  animate={route.id === revealVideo ? 'show' : 'hidden'}
+                  animate="show"
                   transition={transition}
                   loop
                   autoPlay
                   muted
+                  preload="none"
                 />
-              ))}
+              )}
             </VideoContainer>
           )}
         </Backdrop>

@@ -15,6 +15,14 @@ const factory = () => {
   let _context = null;
   let _data = {};
 
+  const removeListeners = () => {
+    if (!_canvas) return;
+
+    _canvas.removeEventListener('mouseenter', _onMouseDown);
+    _canvas.removeEventListener('click', _onMouseClick);
+    _canvas.removeEventListener('mousemove', _onMouseMove);
+  };
+
   const _handleEraserProgress = (currentX, currentY) => {
     const {
       colParts,
@@ -130,7 +138,7 @@ const factory = () => {
 
     _canvas = source;
     _context = _canvas.getContext('2d');
-    const devicePixelRatio = window.devicePixelRatio || 1;
+    const devicePixelRatio = Math.min(window.devicePixelRatio || 1, 1.5);
     const backingStoreRatio =
       _context.webkitBackingStorePixelRatio ||
       _context.mozBackingStorePixelRatio ||
@@ -160,8 +168,6 @@ const factory = () => {
     // _context.scale(scaleRatio, scaleRatio);
     _context.fillStyle = background;
     _context.fillRect(0, 0, width, height);
-    _context.drawImage(_canvas, 0, 0, width, height);
-
     // prepare context for drawing operations
     _context.globalCompositeOperation = 'destination-out';
     _context.lineWidth = size;
@@ -199,6 +205,13 @@ const factory = () => {
       currentOptions,
       ...currentOptions,
     };
+  };
+
+  const destroy = () => {
+    removeListeners();
+    _context = null;
+    _canvas = null;
+    _data = {};
   };
 
   const clear = () => {
@@ -240,6 +253,7 @@ const factory = () => {
     init,
     clear,
     reset,
+    destroy,
   };
 };
 

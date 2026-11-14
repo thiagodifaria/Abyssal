@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import useCursorStyle from '../../../hooks/useCursorStyle';
 import useWindowSize from '../../../hooks/useWindowSize';
 import CanvasEraser from '../../CanvasEraser';
+import LazyVideo from '../../LazyVideo';
 import { BannerSection, BannerTitle, VideoContainer } from './styles';
 
 const titleAnimation = { animate: { transition: { staggerChildren: 0.15 } } };
@@ -19,7 +20,7 @@ const Banner = () => {
   return (
     <BannerSection style={{ height: windowSize.height }}>
       <VideoContainer>
-        <video
+        <LazyVideo
           src="/videos/banner.mp4"
           height="100%"
           width="100%"

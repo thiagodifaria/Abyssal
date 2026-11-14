@@ -6,6 +6,7 @@ import { getExpedition } from '../../utils/constants/expedition-data';
 import { getSiteContent } from '../../utils/constants/site-content';
 import AnimateOnScreen from '../AnimateOnScreen';
 import Footer from '../Home/Footer';
+import LazyVideo from '../LazyVideo';
 import {
   HeroSection,
   HeroVideo,
@@ -45,16 +46,20 @@ const ExpeditionPage = ({ id }) => {
   const labels = getSiteContent(language).expedition;
   const expedition = getExpedition(id, language);
   const nextExpedition = getExpedition(expedition.nextExpedition, language);
+  const heroVideoNeedsManualPlayback = expedition.video === 'whale.mp4';
+  const nextVideoNeedsManualPlayback = nextExpedition.video === 'whale.mp4';
   const { addCursorBorder, removeCursorBorder } = useCursorStyle();
 
   return (
     <>
       <HeroSection>
         <HeroVideo>
-          <video
+          <LazyVideo
+            key={expedition.id}
             src={`/videos/${expedition.video}`}
             loop
-            autoPlay
+            autoPlay={!heroVideoNeedsManualPlayback}
+            controls={heroVideoNeedsManualPlayback}
             muted
             playsInline
           />
@@ -135,10 +140,12 @@ const ExpeditionPage = ({ id }) => {
                   <p>{nextExpedition.subtitle}</p>
                 </div>
                 <NextVideoPreview>
-                  <video
+                  <LazyVideo
+                    key={nextExpedition.id}
                     src={`/videos/${nextExpedition.video}`}
                     loop
-                    autoPlay
+                    autoPlay={!nextVideoNeedsManualPlayback}
+                    controls={nextVideoNeedsManualPlayback}
                     muted
                     playsInline
                   />
