@@ -1,6 +1,6 @@
 # Abyssal
 
-![Abyssal](https://img.shields.io/badge/Abyssal-FRONTEND%20SHOWCASE-003B52?style=for-the-badge)
+![Abyssal](https://img.shields.io/badge/Abyssal-Ocean%20Exploration-003B52?style=for-the-badge) ![Showcase Category](https://img.shields.io/badge/Category-FRONTEND%20SHOWCASE-003B52?style=for-the-badge)
 
 **An immersive ocean-exploration visual experience, built as a front-end showcase.**
 
@@ -9,7 +9,7 @@
 [![Styled Components](https://img.shields.io/badge/Styled%20Components-5.2.0-DB7093?style=flat&logo=styledcomponents&logoColor=white)](https://styled-components.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer%20Motion-Animations-0055FF?style=flat&logo=framer)](https://www.framer.com/motion/)
 [![License](https://img.shields.io/badge/License-MIT-success?style=flat)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.0.2-0B8FA8?style=flat)](https://github.com/thiagodifaria/Abyssal/releases)
+[![Version](https://img.shields.io/badge/version-1.0.3-0B8FA8?style=flat)](https://github.com/thiagodifaria/Abyssal/releases)
 
 **[Live demo / Demonstração online](https://abyssal-thiagodifaria.netlify.app/)**
 
